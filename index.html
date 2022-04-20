@@ -42,9 +42,15 @@
             filter:blur(1px);
         }
         .box:hover{
+            /* https://segmentfault.com/a/1190000040490964 */
             /* box-shadow: inset 2px 2px 10px white; */
-            filter:brightness(220%);
+            filter:drop-shadow(0 0 0.5px #fff) blur(0);
+            box-shadow: 6px 6px 20px rgba(244, 243, 243, 0.771);
             cursor: pointer;
+        }
+        .box:nth-child(1){
+            background-image: url(https://picgoxl.oss-cn-beijing.aliyuncs.com/img/shai.png);
+            background-size: cover;
         }
     </style>
 </head>
@@ -63,6 +69,12 @@
             <div class="box"></div>
         </div>
     </div>
+    <script>
+        let boxs=document.getElementsByClassName('box')
+        boxs[0].onclick=function(){
+            window.location.href='./骰子.html'
+        }
+    </script>
 </body>
 
 </html>
